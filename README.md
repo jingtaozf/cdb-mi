@@ -1,12 +1,18 @@
 # cdb-mi
 cdb debugger interface with emacs,like gdb-mi
 
+cdb-mi implements the basic feature of windbg for cdb common line interface in emacs,
+so you can use emacs as an alternative interface to debug windows application in windows,
+and make enhauncement to fit with your custom requirement. 
+
 ## Feature
 
 * Stack backtrace in a buffer
+
   select one frame will move position to corresponding source file and line.
 
 * Threads list in a buffer
+
   select one thread will update to corresponding stack backtrace 
 
 * simple one-level local variables in a buffer
