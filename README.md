@@ -21,6 +21,16 @@ and make enhauncement to fit with your custom requirement.
 
 ## Usage
 
+### start cdb-mi
+```elisp
+(setf cdb-mi-symbol-path "srv*\\\\192.168.0.121\\d\\Symbols;srv*\\\\192.168.0.122\\d\\WinSymbols")
+(setf cdb-mi-alt-symbol-path "SRV*d:\\WinSymbols*http://msdl.microsoft.com/download/symbols")
+(clear-cdb-breakpoint-icons)
+(update-cdb-mi-current-module :test1 '("test1" "dll1" "dll2"))
+(cdb-mi "c:/debugger/x86/cdb.exe -G -logau c:\\cdb.log -o -pb -g c:/test1.exe")
+```
+
+### Frequenced used shortcut
 ```elisp
 (global-set-key [C-f10] 'cdb-mi-run-to-cursor)
 (global-set-key [f5] 'my-gud-cont)
@@ -35,7 +45,7 @@ and make enhauncement to fit with your custom requirement.
 (global-set-key [f11] 'gud-step)
 ```
 
-Interesting elisp function can set a shortcut to them
+### Other elisp functions may be useful.
 ```elisp
    ;; c-mode c++-mode csharp-mode fundamental-mode
    ("break" gud-break)
